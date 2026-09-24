@@ -1,0 +1,1914 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Ate Ja 💗</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    font-family:"Segoe UI",Arial,sans-serif;
+    background:#000;
+    color:white;
+}
+
+body{
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            #25131c 0%,
+            #0d080b 35%,
+            #000 75%
+        );
+}
+
+.scene{
+    position:relative;
+    width:100%;
+    height:100vh;
+    height:100dvh;
+    overflow:hidden;
+}
+
+/* ================================================= */
+/* ================= GLOW =========================== */
+/* ================================================= */
+
+.glow{
+    position:absolute;
+    width:500px;
+    height:500px;
+    left:50%;
+    top:45%;
+    transform:translate(-50%,-50%);
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(255,70,130,.13),
+            transparent 70%
+        );
+
+    filter:blur(30px);
+}
+
+/* ================================================= */
+/* ================= PARTICLES ====================== */
+/* ================================================= */
+
+.particles{
+    position:absolute;
+    inset:0;
+}
+
+.particle{
+    position:absolute;
+    width:3px;
+    height:3px;
+    border-radius:50%;
+    background:#fff;
+    opacity:.5;
+
+    animation:
+        float 5s infinite ease-in-out;
+}
+
+@keyframes float{
+
+    0%,100%{
+        transform:
+            translateY(0)
+            scale(.7);
+        opacity:.2;
+    }
+
+    50%{
+        transform:
+            translateY(-30px)
+            scale(1.4);
+        opacity:1;
+    }
+
+}
+
+/* ================================================= */
+/* ================= INTRO ========================== */
+/* ================================================= */
+
+.intro{
+    position:absolute;
+    top:11%;
+    left:50%;
+    transform:translateX(-50%);
+
+    text-align:center;
+    width:90%;
+    z-index:5;
+
+    animation:introFade 5s forwards;
+}
+
+.intro small{
+    color:#888;
+    letter-spacing:5px;
+    text-transform:uppercase;
+    font-size:11px;
+}
+
+.intro h2{
+    margin-top:15px;
+    font-size:clamp(20px,4vw,32px);
+    font-weight:300;
+    letter-spacing:2px;
+}
+
+@keyframes introFade{
+
+    0%{
+        opacity:0;
+        transform:translate(-50%,15px);
+    }
+
+    20%{
+        opacity:1;
+        transform:translate(-50%,0);
+    }
+
+    75%{
+        opacity:1;
+    }
+
+    100%{
+        opacity:0;
+    }
+
+}
+
+/* ================================================= */
+/* ================= CAKE AREA ====================== */
+/* ================================================= */
+
+.cake-area{
+    position:absolute;
+    left:50%;
+    top:50%;
+
+    transform:translate(-50%,-38%);
+
+    width:380px;
+    height:370px;
+
+    z-index:10;
+}
+
+.cake{
+    position:absolute;
+
+    width:340px;
+    height:330px;
+
+    left:50%;
+    bottom:0;
+
+    transform:translateX(-50%);
+}
+
+/* ================================================= */
+/* ================= SHADOW ========================= */
+/* ================================================= */
+
+.shadow{
+    position:absolute;
+    bottom:0;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:330px;
+    height:35px;
+
+    background:rgba(255,80,140,.12);
+
+    border-radius:50%;
+
+    filter:blur(15px);
+}
+
+/* ================================================= */
+/* ================= PLATE ========================== */
+/* ================================================= */
+
+.plate{
+    position:absolute;
+
+    bottom:5px;
+    left:50%;
+
+    transform:
+        translateX(-50%)
+        scaleX(0);
+
+    width:350px;
+    height:25px;
+
+    border-radius:50%;
+
+    background:
+        linear-gradient(
+            180deg,
+            #eee,
+            #777
+        );
+
+    box-shadow:
+        0 0 25px rgba(255,255,255,.12);
+
+    animation:
+        plateIn .7s .8s forwards;
+}
+
+@keyframes plateIn{
+
+    to{
+        transform:
+            translateX(-50%)
+            scaleX(1);
+    }
+
+}
+
+/* ================================================= */
+/* ================= CAKE LAYERS ==================== */
+/* ================================================= */
+
+.layer{
+    position:absolute;
+
+    left:50%;
+
+    transform:
+        translateX(-50%)
+        scaleY(0);
+
+    transform-origin:bottom;
+
+    opacity:0;
+
+    border-radius:14px;
+    overflow:hidden;
+}
+
+.layer::after{
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background:
+        radial-gradient(
+            circle at 20% 30%,
+            rgba(255,255,255,.3) 0 2px,
+            transparent 3px
+        );
+
+    opacity:.25;
+}
+
+.layer1{
+    bottom:23px;
+
+    width:310px;
+    height:82px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #ff477e,
+            #a80f46
+        );
+
+    box-shadow:
+        inset 0 -12px rgba(0,0,0,.15),
+        0 15px 35px rgba(255,30,100,.2);
+
+    animation:
+        build .8s 1.2s forwards;
+}
+
+.layer2{
+    bottom:95px;
+
+    width:275px;
+    height:70px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #ff7099,
+            #ce255a
+        );
+
+    animation:
+        build .8s 2s forwards;
+}
+
+.layer3{
+    bottom:157px;
+
+    width:235px;
+    height:60px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #ffb1c6,
+            #ed4d79
+        );
+
+    animation:
+        build .8s 2.8s forwards;
+}
+
+@keyframes build{
+
+    0%{
+        transform:
+            translateX(-50%)
+            scaleY(0);
+        opacity:0;
+    }
+
+    70%{
+        transform:
+            translateX(-50%)
+            scaleY(1.08);
+    }
+
+    100%{
+        transform:
+            translateX(-50%)
+            scaleY(1);
+        opacity:1;
+    }
+
+}
+
+/* ================================================= */
+/* ================= ICING ========================== */
+/* ================================================= */
+
+.icing{
+    position:absolute;
+
+    left:50%;
+    bottom:210px;
+
+    transform:
+        translateX(-50%)
+        scaleX(0);
+
+    width:240px;
+    height:25px;
+
+    border-radius:20px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #fff,
+            #ffd9e4
+        );
+
+    box-shadow:
+        0 5px 12px rgba(255,255,255,.15);
+
+    animation:
+        icing .8s 3.5s forwards;
+}
+
+.icing span{
+    position:absolute;
+
+    width:22px;
+    height:32px;
+
+    bottom:-18px;
+
+    background:#fff;
+
+    border-radius:
+        0 0 15px 15px;
+}
+
+.icing span:nth-child(1){
+    left:35px;
+}
+
+.icing span:nth-child(2){
+    left:105px;
+    height:40px;
+}
+
+.icing span:nth-child(3){
+    right:30px;
+    height:27px;
+}
+
+@keyframes icing{
+
+    0%{
+        transform:
+            translateX(-50%)
+            scaleX(0);
+    }
+
+    70%{
+        transform:
+            translateX(-50%)
+            scaleX(1.08);
+    }
+
+    100%{
+        transform:
+            translateX(-50%)
+            scaleX(1);
+    }
+
+}
+
+/* ================================================= */
+/* ================= CANDLE ========================= */
+/* ================================================= */
+
+.candle{
+    position:absolute;
+
+    left:50%;
+    bottom:228px;
+
+    transform:
+        translateX(-50%)
+        scaleY(0);
+
+    transform-origin:bottom;
+
+    width:25px;
+    height:78px;
+
+    border-radius:5px;
+
+    background:
+        repeating-linear-gradient(
+            135deg,
+            #fff 0 7px,
+            #ff477e 7px 14px
+        );
+
+    box-shadow:
+        0 0 15px rgba(255,70,130,.3);
+
+    animation:
+        candle .7s 4.2s forwards;
+}
+
+@keyframes candle{
+
+    0%{
+        transform:
+            translateX(-50%)
+            scaleY(0);
+    }
+
+    75%{
+        transform:
+            translateX(-50%)
+            scaleY(1.12);
+    }
+
+    100%{
+        transform:
+            translateX(-50%)
+            scaleY(1);
+    }
+
+}
+
+/* ================================================= */
+/* ================= FLAME ========================== */
+/* ================================================= */
+
+.flame{
+    position:absolute;
+
+    left:50%;
+    bottom:302px;
+
+    width:27px;
+    height:42px;
+
+    transform:
+        translateX(-50%)
+        scale(0);
+
+    opacity:0;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            circle at 50% 72%,
+            #fff 0 15%,
+            #ffe45b 28%,
+            #ff8a00 60%,
+            #ff2400 100%
+        );
+
+    filter:
+        drop-shadow(0 0 8px #ffae00)
+        drop-shadow(0 0 22px #ff5a00);
+
+    animation:
+        flameIn .6s 5s forwards,
+        flicker .15s 5.6s infinite alternate;
+}
+
+@keyframes flameIn{
+
+    to{
+        transform:
+            translateX(-50%)
+            scale(1);
+        opacity:1;
+    }
+
+}
+
+@keyframes flicker{
+
+    from{
+        transform:
+            translateX(-50%)
+            scale(1)
+            rotate(-3deg);
+    }
+
+    to{
+        transform:
+            translateX(-50%)
+            scale(1.08)
+            rotate(3deg);
+    }
+
+}
+
+/* ================================================= */
+/* ================= BLOW BUTTON ==================== */
+/* ================================================= */
+
+.blow-btn{
+    position:absolute;
+
+    bottom:8%;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    padding:15px 30px;
+
+    border:
+        1px solid rgba(255,255,255,.25);
+
+    border-radius:50px;
+
+    background:
+        rgba(255,255,255,.06);
+
+    color:white;
+
+    cursor:pointer;
+
+    letter-spacing:1px;
+
+    backdrop-filter:blur(15px);
+
+    box-shadow:
+        0 0 30px rgba(255,60,120,.08);
+
+    opacity:0;
+
+    animation:
+        buttonIn 1s 5.6s forwards;
+
+    transition:.3s;
+
+    z-index:20;
+}
+
+.blow-btn:hover{
+    background:#fff;
+    color:#000;
+
+    box-shadow:
+        0 0 35px rgba(255,255,255,.3);
+
+    transform:
+        translateX(-50%)
+        translateY(-3px);
+}
+
+@keyframes buttonIn{
+
+    to{
+        opacity:1;
+    }
+
+}
+
+/* ================================================= */
+/* ================= WIND =========================== */
+/* ================================================= */
+
+.wind{
+    position:absolute;
+
+    left:50%;
+    bottom:315px;
+
+    width:0;
+    height:2px;
+
+    opacity:0;
+
+    border-radius:50%;
+}
+
+.wind.active{
+    animation:
+        wind .9s forwards;
+}
+
+@keyframes wind{
+
+    0%{
+        opacity:0;
+        width:0;
+
+        transform:
+            translateX(-50%);
+    }
+
+    25%{
+        opacity:1;
+    }
+
+    100%{
+        opacity:0;
+        width:230px;
+
+        transform:
+            translateX(-10%);
+    }
+
+}
+
+/* ================================================= */
+/* ================= FINAL MESSAGE ================== */
+/* ================================================= */
+
+.message{
+    position:absolute;
+    inset:0;
+
+    z-index:50;
+
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(42,15,27,.97),
+            rgba(0,0,0,.99)
+        );
+
+    opacity:0;
+    visibility:hidden;
+
+    transition:1.5s ease;
+
+    padding:20px;
+
+    overflow:hidden;
+}
+
+.message.show{
+    opacity:1;
+    visibility:visible;
+}
+
+/* ================================================= */
+/* ================= BOOK =========================== */
+/* ================================================= */
+
+.letter-book{
+    position:relative;
+
+    width:min(900px,92vw);
+    min-height:500px;
+
+    display:flex;
+
+    background:#f8edf1;
+
+    border-radius:8px;
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,.8),
+        0 0 60px rgba(255,70,130,.18);
+
+    transform:
+        perspective(1200px)
+        rotateX(12deg)
+        scale(.5);
+
+    opacity:0;
+
+    animation:
+        bookOpen 1.5s .15s forwards;
+
+    overflow:hidden;
+}
+
+@keyframes bookOpen{
+
+    0%{
+        opacity:0;
+
+        transform:
+            perspective(1200px)
+            rotateX(20deg)
+            scale(.5);
+    }
+
+    60%{
+        opacity:1;
+
+        transform:
+            perspective(1200px)
+            rotateX(-3deg)
+            scale(1.03);
+    }
+
+    100%{
+        opacity:1;
+
+        transform:
+            perspective(1200px)
+            rotateX(0)
+            scale(1);
+    }
+
+}
+
+/* ================================================= */
+/* ================= BOOK PAGE ====================== */
+/* ================================================= */
+
+.letter-page{
+    position:relative;
+
+    width:50%;
+    min-height:500px;
+
+    padding:45px;
+
+    color:#321c26;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fffafa,
+            #f8e9ee
+        );
+
+    box-shadow:
+        inset 0 0 35px rgba(150,50,80,.08);
+}
+
+/* ================================================= */
+/* ================= LEFT PHOTO ===================== */
+/* ================================================= */
+
+.photo-page{
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+}
+
+.photo-frame{
+    width:270px;
+    height:330px;
+
+    padding:10px;
+
+    background:#f788ff;
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.25);
+
+    transform:rotate(-3deg);
+
+    transition:.5s;
+}
+
+.photo-frame:hover{
+    transform:
+        rotate(0deg)
+        scale(1.03);
+}
+
+.photo-frame img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+    animation:
+        photoMove 5s ease-in-out infinite;
+}
+
+@keyframes photoMove{
+
+    0%,100%{
+        transform:
+            scale(1)
+            translateX(0);
+    }
+
+    25%{
+        transform:
+            scale(1.04)
+            translateX(-4px);
+    }
+
+    50%{
+        transform:
+            scale(1.08)
+            translateX(4px);
+    }
+
+    75%{
+        transform:
+            scale(1.04)
+            translateX(-2px);
+    }
+
+}
+
+.photo-caption{
+    margin-top:22px;
+
+    font-family:
+        "Segoe Script",
+        cursive;
+
+    color:#a94d6d;
+
+    font-size:14px;
+
+    letter-spacing:1px;
+}
+
+.photo-caption span{
+    margin:0 7px;
+}
+
+/* ================================================= */
+/* ================= CENTER BOOK LINE =============== */
+/* ================================================= */
+
+.book-center{
+    position:absolute;
+
+    left:50%;
+    top:0;
+
+    width:3px;
+    height:100%;
+
+    transform:
+        translateX(-50%);
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(80,30,45,.15),
+            rgba(255,255,255,.8),
+            rgba(80,30,45,.15)
+        );
+
+    z-index:10;
+
+    box-shadow:
+        0 0 10px rgba(0,0,0,.15);
+}
+
+/* ================================================= */
+/* ================= RIGHT MESSAGE ================== */
+/* ================================================= */
+
+.text-page{
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    text-align:center;
+}
+
+.letter-small{
+    color:#a0526e;
+
+    font-size:10px;
+
+    letter-spacing:4px;
+
+    margin-bottom:15px;
+}
+
+.text-page h1{
+    font-family:
+        Georgia,
+        serif;
+
+    font-size:
+        clamp(35px,5vw,58px);
+
+    line-height:1;
+
+    color:#9e3159;
+
+    margin-bottom:10px;
+}
+
+.text-page h2{
+    font-family:
+        "Segoe Script",
+        cursive;
+
+    font-size:30px;
+
+    font-weight:400;
+
+    color:#d45b82;
+}
+
+.divider{
+    margin:22px 0;
+
+    color:#c76b8a;
+
+    font-size:13px;
+}
+
+.text-page p{
+    font-size:14px;
+
+    line-height:1.8;
+
+    color:#694652;
+
+    max-width:390px;
+
+    margin:
+        0 auto 14px;
+}
+
+.text-page .last-message{
+    color:#a33760;
+
+    font-weight:bold;
+
+    font-size:15px;
+}
+
+.signature{
+    margin-top:20px;
+
+    color:#986073;
+
+    font-family:
+        "Segoe Script",
+        cursive;
+
+    font-size:14px;
+
+    line-height:1.7;
+}
+
+.signature b{
+    color:#a83e65;
+
+    font-weight:400;
+}
+
+/* ================================================= */
+/* ================= PAGE BORDER ==================== */
+/* ================================================= */
+
+.letter-page::before{
+    content:"";
+
+    position:absolute;
+
+    inset:15px;
+
+    border:
+        1px solid rgba(170,70,100,.18);
+
+    pointer-events:none;
+}
+
+.letter-page::after{
+    content:"♡";
+
+    position:absolute;
+
+    bottom:18px;
+    right:25px;
+
+    font-size:25px;
+
+    color:
+        rgba(190,70,110,.25);
+}
+
+/* ================================================= */
+/* ================= HEARTS ========================= */
+/* ================================================= */
+
+.heart{
+    position:absolute;
+
+    bottom:-30px;
+
+    font-size:20px;
+
+    animation:
+        heartUp 5s linear forwards;
+
+    z-index:5;
+}
+
+@keyframes heartUp{
+
+    0%{
+        transform:
+            translateY(0)
+            scale(.5)
+            rotate(0);
+
+        opacity:0;
+    }
+
+    15%{
+        opacity:1;
+    }
+
+    100%{
+        transform:
+            translateY(-110vh)
+            translateX(var(--move))
+            scale(1.5)
+            rotate(360deg);
+
+        opacity:0;
+    }
+
+}
+
+/* ================================================= */
+/* ================= CONFETTI ======================= */
+/* ================================================= */
+.confetti{
+    position:absolute;
+    top:-20px;
+
+    width:7px;
+    height:14px;
+
+    animation:
+        confettiFall 5s linear forwards;
+
+    z-index:2;
+}
+
+@keyframes confettiFall{
+
+    0%{
+        opacity:1;
+        transform:
+            translateY(0)
+            rotate(0deg);
+    }
+
+    80%{
+        opacity:1;
+    }
+
+    100%{
+        opacity:0;
+        transform:
+            translateY(110vh)
+            rotate(720deg);
+    }
+
+
+
+/* ================================================= */
+/* ================= TABLET ========================= */
+/* ================================================= */
+
+@media (max-width:900px){
+
+    .cake-area{
+        transform:
+            translate(-50%,-38%)
+            scale(.85);
+    }
+
+    .letter-book{
+        width:94vw;
+    }
+
+    .letter-page{
+        padding:35px 25px;
+    }
+
+    .photo-frame{
+        width:220px;
+        height:280px;
+    }
+
+    .text-page h1{
+        font-size:44px;
+    }
+
+    .text-page h2{
+        font-size:26px;
+    }
+
+}
+
+/* ================================================= */
+/* ================= PHONE ========================== */
+/* ================================================= */
+
+@media (max-width:700px){
+
+    html,body{
+        overflow:hidden;
+    }
+
+    .scene{
+        height:100dvh;
+    }
+
+    .intro{
+        top:7%;
+        width:92%;
+    }
+
+    .intro small{
+        font-size:9px;
+        letter-spacing:3px;
+    }
+
+    .intro h2{
+        margin-top:10px;
+        font-size:20px;
+        line-height:1.4;
+        letter-spacing:1px;
+    }
+
+    .cake-area{
+        width:100%;
+        height:360px;
+
+        top:49%;
+
+        transform:
+            translate(-50%,-50%)
+            scale(.72);
+    }
+
+    .blow-btn{
+        bottom:6%;
+
+        padding:13px 24px;
+
+        font-size:13px;
+
+        white-space:nowrap;
+    }
+
+    .message{
+        overflow-y:auto;
+        overflow-x:hidden;
+
+        align-items:flex-start;
+        justify-content:center;
+
+        padding:
+            20px 10px 30px;
+
+        -webkit-overflow-scrolling:touch;
+    }
+
+    .letter-book{
+        width:94vw;
+        max-width:430px;
+
+        min-height:auto;
+
+        display:flex;
+
+        flex-direction:column;
+
+        transform:
+            perspective(1000px)
+            scale(.75);
+
+        transform-origin:
+            top center;
+
+        margin-bottom:-120px;
+    }
+
+    .letter-page{
+        width:100%;
+        min-height:auto;
+
+        padding:
+            35px 25px;
+    }
+
+    .photo-page{
+        min-height:390px;
+
+        justify-content:center;
+    }
+
+    .photo-frame{
+        width:190px;
+        height:235px;
+
+        padding:8px;
+    }
+
+    .photo-caption{
+        margin-top:18px;
+
+        font-size:13px;
+
+        text-align:center;
+    }
+
+    .book-center{
+        left:0;
+        top:50%;
+
+        width:100%;
+        height:3px;
+
+        transform:
+            translateY(-50%);
+    }
+
+    .text-page{
+        min-height:420px;
+
+        padding:
+            35px 25px;
+    }
+
+    .letter-small{
+        font-size:8px;
+
+        letter-spacing:3px;
+
+        margin-bottom:12px;
+    }
+
+    .text-page h1{
+        font-size:38px;
+
+        line-height:1.05;
+
+        margin-bottom:8px;
+    }
+
+    .text-page h2{
+        font-size:25px;
+    }
+
+    .divider{
+        margin:18px 0;
+
+        font-size:11px;
+    }
+
+    .text-page p{
+        font-size:13px;
+
+        line-height:1.7;
+
+        max-width:320px;
+
+        margin:
+            0 auto 12px;
+    }
+
+    .text-page .last-message{
+        font-size:14px;
+    }
+
+    .signature{
+        margin-top:15px;
+
+        font-size:13px;
+    }
+
+    .heart{
+        font-size:16px;
+    }
+
+}
+
+/* ================================================= */
+/* ================= SMALL PHONE ==================== */
+/* ================================================= */
+
+@media (max-width:400px){
+
+    .intro h2{
+        font-size:17px;
+    }
+
+    .cake-area{
+        top:48%;
+
+        transform:
+            translate(-50%,-50%)
+            scale(.60);
+    }
+
+    .blow-btn{
+        bottom:5%;
+
+        padding:
+            12px 20px;
+
+        font-size:12px;
+    }
+
+    .letter-book{
+        width:96vw;
+
+        transform:
+            perspective(1000px)
+            scale(.68);
+
+        margin-bottom:-160px;
+    }
+
+    .letter-page{
+        padding:
+            28px 20px;
+    }
+
+    .photo-page{
+        min-height:350px;
+    }
+
+    .photo-frame{
+        width:165px;
+        height:205px;
+    }
+
+    .text-page{
+        min-height:390px;
+    }
+
+    .text-page h1{
+        font-size:32px;
+    }
+
+    .text-page h2{
+        font-size:22px;
+    }
+
+    .text-page p{
+        font-size:12px;
+        line-height:1.6;
+    }
+
+    .signature{
+        font-size:12px;
+    }
+
+}
+
+/* ================================================= */
+/* ================= VERY SMALL ===================== */
+/* ================================================= */
+
+@media (max-width:350px){
+
+    .intro{
+        top:5%;
+    }
+
+    .intro h2{
+        font-size:15px;
+    }
+
+    .cake-area{
+        top:47%;
+
+        transform:
+            translate(-50%,-50%)
+            scale(.53);
+    }
+
+    .blow-btn{
+        font-size:11px;
+
+        padding:
+            11px 18px;
+    }
+
+    .letter-book{
+        transform:
+            perspective(1000px)
+            scale(.60);
+
+        margin-bottom:-190px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ================================================= -->
+<!-- ================= MAIN SCENE ===================== -->
+<!-- ================================================= -->
+
+<div class="scene">
+
+    <div class="glow"></div>
+
+    <div
+        class="particles"
+        id="particles">
+    </div>
+
+
+    <!-- ================= INTRO ================= -->
+
+    <div class="intro">
+
+        <small>
+            A little surprise
+        </small>
+
+        <h2>
+            Made just for you, Ate Ja 💗
+        </h2>
+
+    </div>
+
+
+    <!-- ================= CAKE ================= -->
+
+    <div class="cake-area">
+
+        <div class="cake">
+
+            <div class="shadow"></div>
+
+            <div class="plate"></div>
+
+            <div class="layer layer1"></div>
+
+            <div class="layer layer2"></div>
+
+            <div class="layer layer3"></div>
+
+            <div class="icing">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </div>
+
+            <div class="candle"></div>
+
+            <div
+                class="flame"
+                id="flame">
+            </div>
+
+            <div
+                class="wind"
+                id="wind">
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= BLOW BUTTON ================= -->
+
+    <button
+        class="blow-btn"
+        id="blowBtn">
+
+        💨 Blow the Candle
+
+    </button>
+
+
+    <!-- ================================================= -->
+    <!-- ================= FINAL MESSAGE ================== -->
+    <!-- ================================================= -->
+
+    <div
+        class="message"
+        id="message">
+
+        <div class="letter-book">
+
+
+            <!-- ================= LEFT PAGE ================= -->
+
+            <div class="letter-page photo-page">
+
+                <div class="photo-frame">
+
+                    <img
+                        src="ateja.jpg"
+                        alt="Ate Ja">
+
+                </div>
+
+                <div class="photo-caption">
+
+                    <span>✨</span>
+
+                    A little memory for you
+
+                    <span>✨</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- ================= BOOK CENTER ================= -->
+
+            <div class="book-center"></div>
+
+
+            <!-- ================= RIGHT PAGE ================= -->
+
+            <div class="letter-page text-page">
+
+                <div class="letter-small">
+                </div>
+
+                <h1>
+                    Happy Birthday!
+                </h1>
+
+                <h2>
+                    Ate Ja 💗
+                </h2>
+
+                <div class="divider">
+                    ♡ ───── ✦ ───── ♡
+                </div>
+
+                <p>
+                    Wishing you a beautiful birthday
+                    filled with happiness, laughter,
+                    love, and unforgettable moments. ✨
+                </p>
+
+                <p>
+                    May this new chapter bring you more
+                    blessings, success, peace, and
+                    countless reasons to smile. 🎀
+                </p>
+
+                <p class="last-message">
+                    Enjoy your special day! 🎂💗
+                </p>
+
+                <div class="signature">
+
+                    <i>
+                        “The Lord bless you and keep you;<br>
+                        the Lord make his face shine on you<br>
+                        and be gracious to you.”
+                    </i>
+
+                    <br><br>
+
+                    <b>
+                        — Numbers 6:24–25 ✨🤍
+                    </b>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================================================= -->
+<!-- ================= BIRTHDAY AUDIO ================= -->
+<!-- ================================================= -->
+
+<audio
+    id="birthdaySound"
+    preload="auto">
+
+    <source
+        src="happybirthday.mp3"
+        type="audio/mpeg">
+
+</audio>
+
+
+<script>
+
+/* ================================================= */
+/* ================= PARTICLES ====================== */
+/* ================================================= */
+
+const particles =
+document.getElementById("particles");
+
+for(let i = 0; i < 90; i++){
+
+    const p =
+        document.createElement("div");
+
+    p.className =
+        "particle";
+
+    p.style.left =
+        Math.random() * 100 + "%";
+
+    p.style.top =
+        Math.random() * 100 + "%";
+
+    p.style.animationDelay =
+        Math.random() * 5 + "s";
+
+    p.style.animationDuration =
+        (3 + Math.random() * 4) + "s";
+
+    particles.appendChild(p);
+
+}
+
+
+/* ================================================= */
+/* ================= ELEMENTS ======================= */
+/* ================================================= */
+
+const blowBtn =
+document.getElementById("blowBtn");
+
+const flame =
+document.getElementById("flame");
+
+const wind =
+document.getElementById("wind");
+
+const message =
+document.getElementById("message");
+
+const birthdaySound =
+document.getElementById("birthdaySound");
+
+let alreadyBlown = false;
+
+
+/* ================================================= */
+/* ================= BLOW CANDLE ==================== */
+/* ================================================= */
+
+blowBtn.addEventListener(
+    "click",
+    () => {
+
+        if(alreadyBlown){
+            return;
+        }
+
+        alreadyBlown = true;
+
+
+        /* ================= SOUND ================= */
+
+        birthdaySound.currentTime = 0;
+
+        birthdaySound
+            .play()
+            .catch(() => {});
+
+
+        /* ================= WIND ================= */
+
+        wind.classList.add("active");
+
+
+        /* ================= BUTTON ================= */
+
+        blowBtn.style.opacity = "0";
+
+        blowBtn.style.pointerEvents =
+            "none";
+
+
+        /* ================= FLAME ================= */
+
+        setTimeout(() => {
+
+            flame.style.animation =
+                "none";
+
+            flame.style.transform =
+                "translateX(-50%) scale(0)";
+
+            flame.style.opacity =
+                "0";
+
+        },400);
+
+
+        /* ================= REVEAL ================= */
+
+        setTimeout(() => {
+
+            message.classList.add("show");
+
+            createConfetti();
+
+            createHearts();
+
+        },1200);
+
+    }
+);
+
+
+/* ================================================= */
+/* ================= CONFETTI ======================= */
+/* ================================================= */
+
+unction createConfetti(){
+
+    const colors = [
+        "#ff477e",
+        "#ff8fab",
+        "#ffffff",
+        "#ffd166",
+        "#c77dff"
+    ];
+
+    for(let i = 0; i < 130; i++){
+
+        const c = document.createElement("div");
+
+        c.className = "confetti";
+
+        c.style.left =
+            Math.random() * 100 + "%";
+
+        c.style.background =
+            colors[
+                Math.floor(
+                    Math.random() * colors.length
+                )
+            ];
+
+        c.style.animationDelay =
+            Math.random() * 2 + "s";
+
+        c.style.transform =
+            rotate(${Math.random() * 360}deg);
+
+        message.appendChild(c);
+
+        // REMOVE CONFETTI AFTER ANIMATION
+        setTimeout(() => {
+            c.remove();
+        }, 7500);
+
+    }
+
+}
+/* ================================================= */
+/* ================= HEARTS ========================= */
+/* ================================================= */
+
+function createHearts(){
+
+    const emojis = [
+
+        "💗",
+        "💕",
+        "💖",
+        "✨",
+        "💓"
+
+    ];
+
+
+    for(let i = 0; i < 35; i++){
+
+        const heart =
+            document.createElement("div");
+
+        heart.className =
+            "heart";
+
+
+        heart.innerHTML =
+            emojis[
+                Math.floor(
+                    Math.random() *
+                    emojis.length
+                )
+            ];
+
+
+        heart.style.left =
+            Math.random() * 100 + "%";
+
+
+        heart.style.animationDelay =
+            Math.random() * 3 + "s";
+
+
+        heart.style.setProperty(
+            "--move",
+            (Math.random() * 200 - 100) + "px"
+        );
+
+
+        message.appendChild(heart);
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
+
